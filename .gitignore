@@ -1,0 +1,9 @@
+.technocore/
+node_modules/
+*.log
+.env
+.env.*
+!.env.example
+identity.json
+identity.dpapi
+activity.json

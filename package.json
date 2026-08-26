@@ -1,0 +1,15 @@
+{
+  "name": "technocore-did-windows",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zero-dependency Windows CLI for a DPAPI-protected Technocore Ed25519 DID",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/cli.mjs && node --check src/lib.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
