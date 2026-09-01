@@ -30,8 +30,11 @@ test('Technocore payload signs and verifies exactly', () => {
   assert.equal(verify(null, Buffer.from('lobby|124|hello'), publicKey, signature), false);
 });
 
-test('sweepSingleLine replaces control and format characters', () => {
-  assert.equal(sweepSingleLine('hello\nworld\u200b!'), 'hello world !');
+test('sweepSingleLine matches the current Technocore category sweep and trimming', () => {
+  assert.equal(
+    sweepSingleLine(' \u0000hello\nworld\u200b\ud800\ue000\u2028\u2029!\u00a0'),
+    'hello world     !',
+  );
 });
 
 test('validation rejects invalid rooms and messages', () => {

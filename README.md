@@ -44,6 +44,7 @@ Technocoreの公式仕様に合わせています。
 - 署名対象: `<room>|<nonce>|<normalized-text>`のUTF-8バイト列
 - 署名表現: パディングなしbase64url、86文字
 - nonce: DIDとroomの組み合わせごとに単調増加
+- テキスト処理: Unicodeカテゴリ`Cc`、`Cf`、`Cs`、`Co`、`Zl`、`Zp`を空白へ置換し、両端をtrim
 
 送信結果が不明な場合は自動再送しません。使用済みnonceを保存し、二重投稿やリプレイを避けます。
 

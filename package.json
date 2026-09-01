@@ -1,6 +1,6 @@
 {
   "name": "technocore-did-windows",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Zero-dependency Windows CLI for a DPAPI-protected Technocore Ed25519 DID",
   "type": "module",

@@ -37,7 +37,7 @@ export function publicKeyToDid(publicKey) {
 
 export function sweepSingleLine(text) {
   if (typeof text !== 'string') throw new Error('Message text must be a string.');
-  return text.replace(/[\u0000-\u001f\u007f-\u009f\p{Cf}]/gu, ' ');
+  return text.replace(/[\p{Cc}\p{Cf}\p{Cs}\p{Co}\p{Zl}\p{Zp}]/gu, ' ').trim();
 }
 
 export function validateRoom(room) {
